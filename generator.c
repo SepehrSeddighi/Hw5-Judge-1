@@ -2,12 +2,29 @@
 #include<string.h>
 #include<stdlib.h>
 #include <dirent.h>
-
+char main_code_name[100];
+char my_code_name[100];
+char s1[100],s2[100],s3[100],s4[100];
 int generator(){
-    system("gcc my_program.c -o my_program.exe");
-    system("gcc main_program.c -o main_program.exe");
+    printf("enter maincodes name:");
+    scanf("%s",main_code_name);
+    printf("enter yourcodes name:");
+    scanf("%s",my_code_name);
+    strcpy(s1,"gcc ");
+    strcpy(s2,my_code_name);
+    strcpy(s3,".c -o my_program.exe");
+    strcat(s1,s2);
+    strcat(s1,s3);
+    system(s1);
+    ////////////////
+    strcpy(s1,"gcc ");
+    strcpy(s2,main_code_name);
+    strcpy(s3,".c -o main_program.exe");
+    strcat(s1,s2);
+    strcat(s1,s3);
+    system(s1);
+    printf("----------------------------------\n");
 
-    char s1[100],s2[100],s3[100],s4[100];
     DIR *d;
     int count=0;
     int c=1;
