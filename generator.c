@@ -9,12 +9,14 @@
 * testCodeFileName C program define program that we are testing with judge and compare to referenceCodeFileName output
 * @param referenceCodeFileName The reference file name written by student
 * @param testCodeFileName The testing file name written by teacher and working well
+* @param s1 @param s2 @param s3 @param s4 are strings that generate commands for program to execute 
 */
+
 char referenceCodeFileName[100];
 char testCodeFileName[100];
 char s1[100],s2[100],s3[100],s4[100];
 int generator(){
-
+//system(gcc p1.c -o p1.exe)
     printf("Enter Referance C Program filename (without extention):");
     scanf("%s",referenceCodeFileName);
     printf("Enter Testing C Program filename (without extention):");
@@ -42,6 +44,7 @@ int generator(){
         printf("----------------------------------------\n");
         return -1;
     }
+  
     else{
         DIR *d;
         int counter=0;

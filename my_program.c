@@ -1,10 +1,11 @@
 #include<stdio.h>
 
 void main(){
-    char name[21];
-    int num;
+    int a,b;
     
-    scanf("%s %d",name,&num);
-    printf("number of %s is %d",name,num);
-
+    scanf("%d %d",&a,&b);
+    if(a==1){
+        printf("222222");
+    }
+    printf("sum=%d",a+b);
 }
